@@ -21,8 +21,8 @@ def process(num)
 end
 
 def run
-  header()
-  input = prompt()
+  header
+  input = prompt
   starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
   process(input)
   ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)

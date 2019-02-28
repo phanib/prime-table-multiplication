@@ -19,8 +19,8 @@ And then execute:
 ### Method 2
 
 And then execute:
-  
- \$ bin/setup
+
+    $ bin/setup
 
 ## Usage
 
