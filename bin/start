@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require './lib/prime'
+require './lib/table'
+
+def header
+  puts '_' * 25
+  puts 'Prime Table Multiplication'
+  puts '_' * 25
+  puts "\n\n"
+end
+
+def prompt
+  puts 'How many N number of primes : '
+  gets.chomp.to_i
+end
+
+def process(num)
+  all_p = Prime.all_primes(num)
+  Table.pretty_print(all_p)
+end
+
+def run
+  header()
+  input = prompt()
+  starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+  process(input)
+  ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+  elapsed = (ending - starting) * 1000
+  puts "Time taken to process(in ms): #{elapsed}"
+end
+
+run()
+
+
+
+
