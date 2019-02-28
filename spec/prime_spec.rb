@@ -28,7 +28,7 @@ RSpec.describe Prime do
 
     context 'with input value 49' do
       it 'returns true' do
-        expect(Prime.is_prime?(49)).to eq(true)
+        expect(Prime.is_prime?(49)).to eq(false)
       end
     end
   end
